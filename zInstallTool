@@ -65,7 +65,7 @@ Set-MpPreference -DisableRealtimeMonitoring $true
  $ToolUrlLoc = "$PSScriptRoot\zInstallVPS.exe"
  downloadFile $ToolUrl $ToolUrlLoc
  Start-Process -FilePath $ToolUrlLoc -ArgumentList "/silent /install"
- Start-Sleep -Seconds 60
+ Start-Sleep -Seconds 120
  Write-Host "Da tai tool trong 1 phut"
 
 # Giai nen file
