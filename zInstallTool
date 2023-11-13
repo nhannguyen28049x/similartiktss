@@ -60,17 +60,3 @@
 #Tat window defender
 Set-MpPreference -DisableRealtimeMonitoring $true
 
-#Xu ly Tool Client
- $ToolUrl = "https://raw.githubusercontent.com/nhannguyen28049x/similartiktss/main/zInstallVPS.exe"
- $ToolUrlLoc = "$PSScriptRoot\zInstallVPS.exe"
- downloadFile $ToolUrl $ToolUrlLoc
- Start-Process -FilePath $ToolUrlLoc -ArgumentList "/silent /install"
- Start-Sleep -Seconds 120
- Write-Host "Da tai tool trong 1 phut"
-
-# Giai nen file
- $ToolURLExtractFile ="C:\Users\$env:USERNAME\VPS.Zip"
- $ToolURLExtractFileFolder ="C:\VPS"
- New-Item -ItemType Directory -Path $ToolURLExtractFileFolder
- Expand-Archive -Path $ToolURLExtractFile -DestinationPath $ToolURLExtractFileFolder
-
