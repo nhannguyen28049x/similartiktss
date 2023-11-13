@@ -55,7 +55,6 @@
  Start-Process -FilePath $ChromeUrlLoc -ArgumentList "/silent /install"
  Wait-Process -Name "ChromeSetup"
  Write-Host "Xu ly xong Chrome."
-
 #xu ly HMA
  $HmaUrl ="https://raw.githubusercontent.com/nhannguyen28049x/similartiktss/main/privax_vpn_online_setup.exe"
  $HmaUrlLoc = "$PSScriptRoot\privax_vpn_online_setup.exe"
