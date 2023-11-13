@@ -48,7 +48,14 @@
  $responseStream.Dispose()
 
  }
- 
+#Xu ly Chrome
+ $ChromeUrl = "https://github.com/trangtrau/random-agent-spoofer/releases/download/v2.0/ChromeSetup.exe"
+ $ChromeUrlLoc = "$PSScriptRoot\ChromeSetup.exe"
+ downloadFile $ChromeUrl $ChromeUrlLoc
+ Start-Process -FilePath $ChromeUrlLoc -ArgumentList "/silent /install"
+ Wait-Process -Name "ChromeSetup"
+ Write-Host "Xu ly xong Chrome."
+
 #xu ly HMA
  $HmaUrl ="https://raw.githubusercontent.com/nhannguyen28049x/similartiktss/main/privax_vpn_online_setup.exe"
  $HmaUrlLoc = "$PSScriptRoot\privax_vpn_online_setup.exe"
