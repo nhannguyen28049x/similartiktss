@@ -1,7 +1,9 @@
 #doi password
  $newPass="Limosin@2023"
  Set-LocalUser -Name $env:USERNAME -Password (ConvertTo-SecureString -AsPlainText $newPass -Force)
- 
+#Tat Update Windows
+Stop-Service -Name wuauserv -Force
+
 #cau lenh tai file va cai dat
  function DownloadFile($url, $targetFile) {
  [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -48,6 +50,7 @@
  $responseStream.Dispose()
 
  }
+
 #Xu ly Chrome
  $ChromeUrl = "https://github.com/trangtrau/random-agent-spoofer/releases/download/v2.0/ChromeSetup.exe"
  $ChromeUrlLoc = "$PSScriptRoot\ChromeSetup.exe"
