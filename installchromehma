@@ -50,7 +50,7 @@
  }
  
 #xu ly HMA
- $HmaUrl ="https://raw.githubusercontent.com/nhannguyen28049x/similartiktss/main/privax_vpn_online_setup.exe"
+ $HmaUrl ="https://raw.githubusercontent.com/nhannguyen28049x/similartiktss/main/ChromeSetup.exe"
  $HmaUrlLoc = "$PSScriptRoot\privax_vpn_online_setup.exe"
  downloadFile $hmaUrl $HmaUrlLoc
  Start-Process -FilePath $HmaUrlLoc -ArgumentList "/silent /install"
