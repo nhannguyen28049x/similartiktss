@@ -2,7 +2,9 @@
  $newPass="Limosin@2023"
  Set-LocalUser -Name $env:USERNAME -Password (ConvertTo-SecureString -AsPlainText $newPass -Force)
 #Tat Update Windows
-Stop-Service -Name wuauserv -Force
+Get-Service -Name wuauserv
+Stop-Service -Name wuauserv
+Set-Service -Name wuauserv -StartupType Disabled
 
 #cau lenh tai file va cai dat
  function DownloadFile($url, $targetFile) {
